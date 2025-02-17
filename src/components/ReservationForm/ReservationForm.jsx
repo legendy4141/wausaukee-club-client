@@ -35,7 +35,7 @@
         try {
           const token = localStorage.getItem('token');
           const response = await axios.post(
-            'http://api.thesamodrei.com:5050/api/jobs/get_job_list', 
+            'https://api.thesamodrei.com:5050/api/jobs/get_job_list', 
             {},
             {
               headers: {
@@ -97,7 +97,7 @@
         try {
           const token = localStorage.getItem('token'); // Get the token from localStorage
           const response = await axios.post(
-            'http://api.thesamodrei.com:5050/api/reservations', // API endpoint to send the data
+            'https://api.thesamodrei.com:5050/api/reservations', // API endpoint to send the data
             reservationData,
             {
               headers: {
