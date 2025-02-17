@@ -1,0 +1,60 @@
+/* RegisterForm.css */
+
+/* Main form container styling */
+.register-form {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 600px; /* Adjust maximum width as needed */
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin: 0 auto; /* Center horizontally */
+  }
+  
+  /* Ensure the form uses a column layout */
+  .register-form form>div{
+    flex-grow: 1;
+    width: calc(50% - 10px);
+  }
+  .register-form form {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Row container for two inputs per row */
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Each form group takes roughly 50% width minus the gap */
+  .form-row .form-group {
+    flex: 1 1 calc(50% - 1rem);
+  }
+  
+  /* Styling for inputs */
+  .register-form .form-control {
+    height: 40px;
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+  
+  /* Label styling */
+  .register-form label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Button container styling */
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  
