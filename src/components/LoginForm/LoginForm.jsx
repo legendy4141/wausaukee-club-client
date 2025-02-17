@@ -25,7 +25,7 @@ function LoginForm() {
 
       try {
         // Send login request to backend
-        const response = await axios.post('http://localhost:5000/api/auth/login', {
+        const response = await axios.post('http://api.thesamodrei.com:5050/api/auth/login', {
           email,
           password,
         });
