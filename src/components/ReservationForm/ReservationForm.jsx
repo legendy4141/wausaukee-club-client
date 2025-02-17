@@ -35,7 +35,7 @@
         try {
           const token = localStorage.getItem('token');
           const response = await axios.post(
-            'https://api.wausaukeelub.org/api/jobs/get_job_list', 
+            'https://api.wausaukeeclub.org/api/jobs/get_job_list', 
             {},
             {
               headers: {
@@ -97,7 +97,7 @@
         try {
           const token = localStorage.getItem('token'); // Get the token from localStorage
           const response = await axios.post(
-            'https://api.wausaukeelub.org/api/reservations', // API endpoint to send the data
+            'https://api.wausaukeeclub.org/api/reservations', // API endpoint to send the data
             reservationData,
             {
               headers: {

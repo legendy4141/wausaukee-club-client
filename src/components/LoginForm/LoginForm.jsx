@@ -25,7 +25,7 @@ function LoginForm() {
 
       try {
         // Send login request to backend
-        const response = await axios.post('https://api.wausaukeelub.org/api/auth/login', {
+        const response = await axios.post('https://api.wausaukeeclub.org/api/auth/login', {
           email,
           password,
         });
