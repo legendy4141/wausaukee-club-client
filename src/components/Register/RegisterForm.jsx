@@ -43,7 +43,7 @@ function RegisterForm() {
     }
 
     try {
-      const response = await axios.post('http://api.thesamodrei.com:5000/api/auth/register', formData);
+      const response = await axios.post('https://api.wausaukeelub.org/api/auth/register', formData);
       setMessage("Registered Successfully!");
       setSuccess(true);
     } catch (error) {
