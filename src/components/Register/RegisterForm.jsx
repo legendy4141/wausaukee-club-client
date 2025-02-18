@@ -6,6 +6,7 @@ import axios from 'axios';
 
 function RegisterForm() {
   const [formData, setFormData] = useState({
+    id: '',
     email: '',
     password: '',
     confirmPassword: '',
@@ -61,6 +62,22 @@ function RegisterForm() {
       transition={{ duration: 1 }}
     >
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        {/* Client ID */}
+        <Form.Group className="mb-3" controlId="registerEmail">
+          <Form.Label>Client ID</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter your ID"
+            name="id"
+            value={formData.id}
+            onChange={handleChange}
+            required
+          />
+          <Form.Control.Feedback type="invalid">
+            Please enter a valid ID.
+          </Form.Control.Feedback>
+        </Form.Group>
+
         {/* Email Address */}
         <Form.Group className="mb-3" controlId="registerEmail">
           <Form.Label>Email Address</Form.Label>
