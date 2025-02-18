@@ -13,6 +13,7 @@ import Contact from './pages/Contact/Contact';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Footer from './components/Footer/Footer';
+import Profile from './pages/Profile/Profile'
 
 function App() {
   const navigate = useNavigate();
@@ -25,6 +26,9 @@ function App() {
     navigate('/login'); // Redirect to login page after logout
   };
 
+  const handleProfile = () => {
+    navigate('/profile');
+  };
   return (
     <div id="app">
       <Navbar expand="lg" className="fixed-top bg-body-tertiary shadow">
@@ -67,7 +71,10 @@ function App() {
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 {token ? (
-                  <Dropdown.Item onClick={handleLogout}>Log out</Dropdown.Item> // Show Logout if token exists
+                  <>
+                    <Dropdown.Item onClick={handleProfile}>Profile</Dropdown.Item>
+                    <Dropdown.Item onClick={handleLogout}>Log out</Dropdown.Item>
+                  </>
                 ) : (
                   <Link to="/login" className="dropdown-item">
                     Login
@@ -86,6 +93,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
 
       <Footer />

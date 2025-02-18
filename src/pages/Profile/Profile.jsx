@@ -1,7 +1,8 @@
-// src/pages/Register/Register.js
+// src/pages/Profile/Profile.jsx
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import ProfileForm from '../../components/Profile/ProfileForm';
 
 function Profile() {
   return (
@@ -12,6 +13,7 @@ function Profile() {
         transition={{ duration: 1 }}
       >
         <h2 className="mb-4 text-center page-title">Profile</h2>
+        <ProfileForm />
       </motion.div>
     </Container>
   );
